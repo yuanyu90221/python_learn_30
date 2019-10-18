@@ -13,6 +13,9 @@ def check_battery(high, low):
     elif percent >= high and charging:
         print('電量充足，請拔掉電源線'+message)
         return {'title':'battery high!', 'message': '電量充足，請拔掉電源線'+message}
+    elif not charging:
+        print(message)
+        return {'title':'battery info', 'message': message}
 
 while True:
     alert = check_battery(80, 40)
