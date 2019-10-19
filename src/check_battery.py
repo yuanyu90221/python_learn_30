@@ -16,6 +16,7 @@ def check_battery(high, low):
     elif not charging:
         print(message)
         return {'title':'battery info', 'message': message}
+    return {'title':'battery info', 'message': message}
 
 while True:
     alert = check_battery(80, 40)
